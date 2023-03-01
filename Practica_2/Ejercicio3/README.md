@@ -1,3 +1,8 @@
+Este proyecto usa como base el siguiente repositorio: https://github.com/prathamvasa/Functional-Calculator-using-CORBA-Client-Server-Programming
+He añadido diferentes funcionalidades.
+
+
+
 •Tools and technologies used:
 Java, CORBA architecture, Eclipse IDE.
 
@@ -12,3 +17,4 @@ through Java IDL capability.
 •The interactions between the User, Client Agent, and the “Calculator” Server are synchronous, i.e, the user has to wait to receive the response to the calculation operation request before responding by another request. 
 
 •Basic arithmetic operations of addition, subtraction, division, multiplication etc were implemented through this calculator. The calculator was implemented using the CORBA (Common Object Request Broker Architecture) paradigm.
+
