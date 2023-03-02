@@ -94,9 +94,8 @@ else if(a==98) //Operador es la letra b -> Ej: b03 Resultado: 11
       res *= 10;   // Ej: Si tenemos la secuencia 101 en el array, el programa detecta el 1 y empieza con una multiplicacion por 10
       res += 1;   // Pero como todavia tenemos un 0 de valor, no cambia. Se le suma uno y el resultado que tenemos ahora es de 1
     }            // Pasamos a la siguiente iteracion, que recibe un 0, entonces se multiplica por 10 y tenemos de resultado 10
-  }             // En la ultima iteracion recibimos otro 1, entonces multiplicamos por 10 el resultado y nos queda 100, finalmente
-               // Le sumamos un 1 y el resultado final nos da 101.
-return res;
+  }             // En la ultima iteracion recibimos otro 1, entonces multiplicamos por 10 el resultado y nos queda 100, finalmente               
+return res;    // Le sumamos un 1 y el resultado final nos da 101.
 }
 
 
