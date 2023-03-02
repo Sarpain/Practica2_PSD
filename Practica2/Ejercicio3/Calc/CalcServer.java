@@ -71,6 +71,36 @@ else if(a==47)
 return (b/c);
 }
 
+//Decimal a binario
+else if(a==98) //Operador es la letra b -> Ej: b03 Resultado: 11
+{
+  ArrayList<Integer> array = new ArrayList<Integer>();
+  int res = 0;
+  int valor = b*10 + c;
+
+  if (valor == 1 || valor == 0){ // Funcion para conseguir ceros y unos con el operando modulo
+    array.add(valor);
+  }else{
+    while (valor >= 1){       // Mientras el valor sea mayor/igual que 1 el codigo entre corchetes sera ejecutado
+        int val = valor % 2; // Devuelve el modulo de dividir el valor entre 2 que siempre es 0 o 1
+        array.add(val);     // Agrega el valor obtenido anteriormente a una ArrayList 
+        valor = valor/2;   //Divide el valor entre dos para realizar la siguiente operacion
+    }
+}
+  for(int i = array.size() - 1; i >= 0; i--) { // Pone los valores del array en res para retornarlo
+    if (array.get(i) == 0 ){
+      res *= 10;     // Si en la posicion en la que esta tiene un 0, se multiplica por 10 para representar un salto 
+    }else{          // Si en la posicion en la que esta tiene un 1, se multiplica por 10 para hacer un salto y se suma 1
+      res *= 10;   // Ej: Si tenemos la secuencia 101 en el array, el programa detecta el 1 y empieza con una multiplicacion por 10
+      res += 1;   // Pero como todavia tenemos un 0 de valor, no cambia. Se le suma uno y el resultado que tenemos ahora es de 1
+    }            // Pasamos a la siguiente iteracion, que recibe un 0, entonces se multiplica por 10 y tenemos de resultado 10
+  }             // En la ultima iteracion recibimos otro 1, entonces multiplicamos por 10 el resultado y nos queda 100, finalmente
+               // Le sumamos un 1 y el resultado final nos da 101.
+return res;
+}
+
+
+
 //DEFAULT
 else
 {
